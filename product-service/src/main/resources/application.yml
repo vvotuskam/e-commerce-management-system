@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: product-service
+  liquibase:
+    enabled: true
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/product_service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://188.166.186.82:8762/realms/first-job-auth

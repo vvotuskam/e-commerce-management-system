@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: '20240222_1000_create_orders_table'
+      author: 'Asulan Maksut'
+      changes:
+        - sqlFile:
+            path: 'changeset/20240222_1000_create_orders_table.sql'
+            dbms: 'postgresql'
+            encoding: 'UTF-8'
+            endDelimiter: ';'
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: '20240222_1100_create_products_table'
+      author: 'Asulan Maksut'
+      changes:
+        - sqlFile:
+            path: 'changeset/20240222_1100_create_products_table.sql'
+            dbms: 'postgresql'
+            encoding: 'UTF-8'
+            endDelimiter: ';'
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+  - changeSet:
+      id: '20240222_1200_create_ordered_products_table'
+      author: 'Asulan Maksut'
+      changes:
+        - sqlFile:
+            path: 'changeset/20240222_1200_create_ordered_products_table.sql'
+            dbms: 'postgresql'
+            encoding: 'UTF-8'
+            endDelimiter: ';'
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
