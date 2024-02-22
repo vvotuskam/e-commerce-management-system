@@ -17,8 +17,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
@@ -37,11 +39,12 @@ public class OrderEntity {
 
     private String customerEmail;
 
+    @CreationTimestamp
     private LocalDateTime orderedAt;
 
     @Enumerated(EnumType.STRING)
     private OrderStatusEnum status;
 
     @OneToMany(mappedBy = "order")
-    private List<OrderedProductEntity> orderedProducts;
+    private Collection<OrderedProductEntity> orderedProducts;
 }

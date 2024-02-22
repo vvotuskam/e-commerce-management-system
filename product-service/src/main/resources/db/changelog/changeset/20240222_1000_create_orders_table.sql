@@ -2,7 +2,7 @@ create table if not exists orders
 (
     id             uuid         not null primary key default gen_random_uuid(),
     customer_email varchar(255) not null,
-    ordered_at     timestamp    not null             default current_timestamp,
+    ordered_at     timestamp                         default current_timestamp,
     status         varchar(20)  not null check ( status in ('PENDING', 'SHIPPED', 'DELIVERED') )
 );
 
