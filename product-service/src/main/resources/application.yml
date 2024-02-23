@@ -20,3 +20,6 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://188.166.186.82:8762/realms/first-job-auth
+  kafka:
+    bootstrap-servers: localhost:29092
+    payment-topic: payment-topic
