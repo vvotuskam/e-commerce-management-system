@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: '20240223_1200_create_payments_table'
+      author: 'Asulan Maksut'
+      changes:
+        - sqlFile:
+            path: 'changeset/20240223_1200_create_payments_table.sql'
+            dbms: 'postgresql'
+            encoding: 'UTF-8'
+            endDelimiter: ';'
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
